@@ -2,9 +2,9 @@ import { useState } from "react";
 import "./Feedback.css";
 import MyButton from "../../components/myButton/MyButton";
 
-const Feedback = () => {
-     const [likes, setLikes] = useState(0);
-     const [dislikes, setDislikes] = useState(0);
+function Feedback () {
+     const [like, setLikes] = useState(0);
+     const [dislike, setDislikes] = useState(0);
 
      const handleLike = () => setLikes(prev => prev +1);
 
@@ -15,20 +15,21 @@ const Feedback = () => {
           setDislikes(0);
      };
      return (
-          <div className="feedback-container">
-          <div className="like-section">
-        <span className="count">{likes}</span>
-     <MyButton text="Like" onClick={handleLike}></MyButton>
-        </div>
-        <div className="dislike-section">
-     <MyButton text="DisLike" onClick={handleDislike}></MyButton>
-          <span className="count">{dislikes}</span>
-        </div>
-        <div className="reset-section">
-        <MyButton text="Reset Results" onClick={handleReset}></MyButton>
+    <div>
+      <h1>Feedback 😌</h1>
+      <div>
+        <span>{like}</span>
+        <MyButton text="👍" func={handleLike} />
+        <MyButton text="👎" func={handleDislike} />
+        <span>{dislike}</span>
       </div>
-       </div>
-     );
+      <div>
+      <MyButton text="Reset Results" func={handleReset} />
+
+
+      </div>
+    </div>
+  );
 
 }
 
