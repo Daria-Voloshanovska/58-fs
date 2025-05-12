@@ -52,7 +52,7 @@ export const fellowship2 = [{
     age: 38,
     isDark: false,
     weapons: ["cooking gear", "Sting (briefly)"],
-    image: "https://static.wikia.nocookie.net/lotr/images/2/20/Sam.jpg"
+    image: "https://cdn.mos.cms.futurecdn.net/wvtrnPSEjFyQYSmQf7vKaD.jpeg"
   },
   {
     id: 8,
